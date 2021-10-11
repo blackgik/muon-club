@@ -1,6 +1,12 @@
 MUON CLUB
+DESCRIPTION: This is an application built to handle post and create comments under the Post. 
 
-POSTCreate Post
+=====STARTING THE SERVER====  
+=> npm run dev (development)
+=> npm start (production)
+
+======== elete a Post ==================
+POST Create Post
 
 https://muonclub.herokuapp.com/api/v1/user/post/new
 
@@ -19,7 +25,7 @@ curl --location --request POST 'https://muonclub.herokuapp.com/api/v1/user/post/
     "username": "usman"
 }'
 
-
+======== Creating a comment ==================
 POST Create comment
 https://muonclub.herokuapp.com/api/v1/user/post/comment/new?postID=616467c623ae97e7f0114c9d
 
@@ -45,6 +51,8 @@ curl --location --request POST 'https://muonclub.herokuapp.com/api/v1/user/post/
     }
 }'
 
+
+======== Getting all Posts ==================
 GETAll Posts
 
 https://muonclub.herokuapp.com/api/v1/user/fetch/posts
@@ -62,6 +70,8 @@ Example Request
 Read Post
 
 curl --location --request GET 'https://muonclub.herokuapp.com/api/v1/user/read/6164548eb30c3c6f6c73b28e'
+
+======== EDIT a Post ==================
 PATCHEdit Comment
 https://muonclub.herokuapp.com/api/v1/user/comment/edit/6164683223ae97e7f0114ca2?postID=616467c623ae97e7f0114c9d
 PARAMS
@@ -82,8 +92,8 @@ curl --location --request PATCH 'https://muonclub.herokuapp.com/api/v1/user/comm
     "comment" : "never before"
 }'
 
-
-DELDelete Comment
+======== Delete a Comment ==================
+DEL Delete Comment
 
 https://muonclub.herokuapp.com/api/v1/user/comment/delete/6164683223ae97e7f0114ca2?postID=616467c623ae97e7f0114c9d
 
@@ -97,5 +107,7 @@ Example Request
 Delete Comment
 
 curl --location --request DELETE 'https://muonclub.herokuapp.com/api/v1/user/comment/delete/6164683223ae97e7f0114ca2?postID=616467c623ae97e7f0114c9d'
-DELDelete Post
+
+======== Delete a Post ==================
+DEL Delete Post
 https://muonclub.herokuapp.com/api/v1/user/delete/6164548eb30c3c6f6c73b28e

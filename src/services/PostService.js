@@ -1,5 +1,5 @@
-const postModel = require("./../Models/PostModel");
-const { NotFoundError } = require("./../../lib/appErrors");
+const postModel = require("../Models/PostModel");
+const { NotFoundError } = require("../../lib/appErrors");
 
 class Posts {
   async createNewPost(data) {

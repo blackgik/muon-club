@@ -9,7 +9,7 @@ require("express-async-errors");
 const rootRouter = require("./routes/index")(router);
 
 const app = express();
-const port = 9000 || process.env.PORT;
+const port = process.env.PORT;
 
 // creating the app middlewares
 app.use(express.json());

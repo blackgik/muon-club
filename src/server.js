@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const router = require("express").Router();
-const rootRouter = require("./routes/index")(router);
+const { ErrorHandler } = require("./Middlewares/ErrorHandlers");
+const { NotFoundError } = require("../lib/appErrors");
 require("dotenv").config();
 require("./DB/mongoose");
 require("express-async-errors");
-const { ErrorHandler } = require("./Middlewares/ErrorHandlers");
-const { NotFoundError } = require("./../lib/appErrors");
+const rootRouter = require("./routes/index")(router);
 
 const app = express();
 const port = 9000 || process.env.PORT;

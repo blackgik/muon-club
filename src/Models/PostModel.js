@@ -1,10 +1,10 @@
 const { Schema, model } = require("mongoose");
 
 const PostSchema = new Schema({
-  username: { 
-    type: String, 
-    required:true, 
-    trim:true
+  username: {
+    type: String,
+    required: true,
+    trim: true,
   },
   post: {
     type: String,
@@ -13,9 +13,16 @@ const PostSchema = new Schema({
   },
   comments: [
     {
-      comment: { type: String, required: true },
+      comment: {
+        newComment: { type: String, required: true },
+        reply: [
+          {
+            comment: { type: String, required: true },
+          },
+        ],
+      },
     },
   ],
 });
 
-module.exports = model("Post", PostSchema)
+module.exports = model("Post", PostSchema);

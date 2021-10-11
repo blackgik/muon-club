@@ -28,7 +28,7 @@ app.get("/status", (req, res) => {
 // if route is not handled up till this point
 app.use((req, res, next) => {
   next(new NotFoundError());
-});
+})
 
 // app Errors middleware handlers
 app.use(ErrorHandler);
